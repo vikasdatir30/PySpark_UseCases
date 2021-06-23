@@ -18,7 +18,7 @@ rdd_reduce =  rdd_map.reduceByKey(lambda  a,b : a+b)
 rdd_sort = rdd_reduce.map(lambda x: (x[1], x[0])).sortByKey(ascending=False)
 
 print('Highest word count :', rdd_sort.take(1))
-rdd_sort.coalesce(1).saveAsTextFile('E:\\TgtData\\WordCount')
+rdd_sort.coalesce(1).saveAsTextFile('E:\\TgtData\\WordCount')	
 
 
 
